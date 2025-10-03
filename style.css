@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+body {
+    background-color: white;   
+}
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    margin: auto auto auto auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 2em auto 2em auto;
+    min-width: 80%;
+    width: min(75em, 100%);
+    background-color: rgba(215, 130, 255, 0.397);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+    place-items: center;
+}
+
+.purple-top-heading-block {
+    text-align: center;
+    background-color: #6a0dad;
+    color: #ffffff;
+    min-height: 6rem;
+    position: reletive;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+div {
+    place-items: center;
+}
+
+.flex-container {
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.white {
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em 1em 1em 1em;
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+    place-items: center;
+}
+
+.money-raised-value-display {
+    font-size: 5em;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25em;
+}
+
+.cta-button {
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: plum;
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.cta-button:hover {
+    background-color: rgb(179, 105, 255);
+    scale: 1.05;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25em;
+}
+
+.grid-container {
+    margin: 3em 1em 3em 1em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}
+
+.grid-container-single {
+    margin: 3em 1em 3em 1em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr;
+}
+
+.in-a-line {
+    display: flex;
+}
+
+.grid-container a {
+    padding: 1em;
+    height: 100%;
+    width: 80%;
+    border-radius: 2em;
+    transition: 100ms ease;
+}
+
+.grid-container img {
+    transition-property: all;
+    transition-duration: .25s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 988px) {
+    header {
+        text-align: center;
+        font-size: .5em;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+    .money-raised-value-display {
+        font-size: 5em;
+        font-weight: bold;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .in-a-line {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child {
+        display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction:column;
+    }
+
+    .text-container {
+        font-size: 1rem;
+    }
+
+    .money-raised-value-display {
+        font-size: 4em;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
