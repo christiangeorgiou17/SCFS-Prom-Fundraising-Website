@@ -215,6 +215,10 @@ section p {
         display: flex;
         flex-direction: column;
     }
+
+    iframe {
+        width: 480px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -251,5 +255,9 @@ section p {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    iframe {
+        width: 320px;
     }
 }
