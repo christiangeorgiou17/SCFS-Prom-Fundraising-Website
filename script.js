@@ -37,8 +37,9 @@ const Elements = [
 ]
 
 if (toLock) {
-  for (x = 0, x < 3, x ++) {
+  for (x = 0; x < 3; x ++) {
     Elements[x].remove()
   }
   console.log("Lock")
 }
+
