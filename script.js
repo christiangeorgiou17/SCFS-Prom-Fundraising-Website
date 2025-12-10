@@ -20,8 +20,13 @@ fetch('failsafe.json')
     return response.json();
   })
   .then(data => {
-    toLock = data.lock;
-  })
+    if (data.lock) {
+      for (x = 0; x < Elements.length; x ++) {
+        Elements[x].remove()
+      }
+      console.log(data.message)
+    }
+})
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
@@ -31,15 +36,10 @@ let oldHelpMessage = "Donations are welcome and thank you so much for your help.
 //document.getElementById("money-raised-value").innerHTML = moneyRaisedValue;
 
 const Elements = [
+  document.getElementsByTagName("header")[0],
   document.getElementById("home"),
   document.getElementById("money-raised-section"),
-  document.getElementById("how-can-you-help")
+  document.getElementById("how-we-raise-money"),
+  document.getElementById("how-can-you-help"),
+  document.getElementsByTagName("footer")[0]
 ]
-
-if (toLock) {
-  for (x = 0; x < 3; x ++) {
-    Elements[x].remove()
-  }
-  console.log("Lock")
-}
-
